@@ -1,3 +1,4 @@
+/* arrey dei posts */
 const posts = [
     {
         "id": 1,
@@ -57,13 +58,14 @@ const posts = [
 ];
 
 
-
+/* variabili */
 let container=document.getElementById("container");
 let pulsantiLike=document.getElementsByClassName(".like-button");
+let likes=document.getElementsByClassName("like-button");
 
-
+/* per ognuno degli elementi dell'arrey creo un post, che contiene ogni dato */
 posts.forEach(element => 
-    
+    /* creo i post di ogni utente,direttamente nell'html */
     container.innerHTML+=`        
     <div class="post">
         <div class="post__header">
@@ -96,48 +98,123 @@ posts.forEach(element =>
         </div>            
     </div>
     `
-    
-    
 );   
-let likes=document.getElementsByClassName("like-button");
 
 
+
+
+/* ad ogni pulsante controllo il click */
 likes[0].addEventListener("click",function(){
-    if(likes[0].style.color="#404040;"){
-        likes[0].style.color = "green";
+    /* se l'utente mette like ad un post accade.... */
+    if (!((likes[0].classList.contains("like-button--liked")))){
+        /* che il bottone diventa verde */
+        likes[0].classList.add("like-button--liked")
+        /* il numero di like cresce */
         let i=posts[0].likes
         i++
+        /* modifico i like con il dato aggiornarto  */
         document.getElementById("like-counter-1").innerHTML=i
     }
-    else if((likes[0].style.color="green")){
-        likes[0].style.color = "#404040;";
+    /* altrimenti */
+    else{
+        /* il colore del like è quello di defoult */
+        likes[0].style.color = "#404040";
+        /* infatti il numero di like è quello iniziale */
         let i=posts[0].likes
-        i--
         document.getElementById("like-counter-1").innerHTML=i
     }
 })
+/* ad ogni pulsante controllo il click */
 likes[1].addEventListener("click",function(){
-    likes[1].style.color = "green";
-    let i=posts[1].likes
-    i++;
-    document.getElementById("like-counter-2").innerHTML=i
+    /* se l'utente mette like ad un post accade.... */
+    if (!((likes[1].classList.contains("like-button--liked")))){
+        /* che il bottone diventa verde */
+        likes[1].classList.add("like-button--liked")
+        let i=posts[1].likes
+        /* il numero di like cresce */
+        i++
+        /* modifico i like con il dato aggiornarto  */
+        document.getElementById("like-counter-2").innerHTML=i
+    }
+    /* altrimenti */
+    else{
+        /* il colore del like è quello di defoult */
+        likes[1].style.color = "#404040";
+        let i=posts[1].likes
+        /* infatti il numero di like è quello iniziale */
+        document.getElementById("like-counter-2").innerHTML=i
+    }
 })
+/* ad ogni pulsante controllo il click */
 likes[2].addEventListener("click",function(){
-    likes[2].style.color = "green";
-    let i=posts[2].likes;
-    i++;
-    document.getElementById("like-counter-3").innerHTML=i
-})
-likes[3].addEventListener("click",function(){
-    likes[3].style.color = "green";
+    /* se l'utente mette like ad un post accade che.... */
+    if (!((likes[2].classList.contains("like-button--liked")))){
+        /* che il bottone diventa verde */
+        likes[2].classList.add("like-button--liked")
+        let i=posts[2].likes
+        /* il numero di like cresce */
+        i++
+        /* modifico i like con il dato aggiornarto  */
+        document.getElementById("like-counter-3").innerHTML=i
+    }
+   /* altrimenti */
+    else{
+    /* il colore del like è quello di defoult */
+    likes[2].style.color = "#404040";
     let i=posts[3].likes
-    i++
-    document.getElementById("like-counter-4").innerHTML=i
+    /* infatti il numero di like è quello iniziale */
+    document.getElementById("like-counter-3").innerHTML=i
+    }
 })
-likes[4].addEventListener("click",function(){
-    likes[4].style.color = "green";
-    let i=posts[4].likes
-    i++
-    document.getElementById("like-counter-5").innerHTML=i
 
+
+
+
+/* ad ogni pulsante controllo il click */
+
+likes[3].addEventListener("click",function(){
+    if (!((likes[3].classList.contains("like-button--liked")))){
+        /* se l'utente mette like ad un post accade che.... */
+        
+        /* che il bottone diventa verde */
+        likes[3].classList.add("like-button--liked")
+        let i=posts[3].likes
+        /* il numero di like cresce */
+        i++
+        /* modifico i like con il dato aggiornarto  */
+        document.getElementById("like-counter-4").innerHTML=i
+    }
+    /* altrimenti */
+    else{
+        /* il colore del like è quello di defoult */
+        likes[3].style.color = "#404040";
+        let i=posts[3].likes
+        /* infatti il numero di like è quello iniziale */
+        document.getElementById("like-counter-4").innerHTML=i
+    }
+})
+
+
+/* ad ogni pulsante controllo il click */
+
+likes[4].addEventListener("click",function(){
+    if (!((likes[4].classList.contains("like-button--liked")))){
+        /* se l'utente mette like ad un post accade che.... */
+        
+        /* che il bottone diventa verde */
+        likes[4].classList.add("like-button--liked")
+        let i=posts[4].likes
+        /* il numero di like cresce */
+        i++
+        /* modifico i like con il dato aggiornarto  */
+        document.getElementById("like-counter-5").innerHTML=i
+    }
+    /* altrimenti */
+    else{
+        /* il colore del like è quello di defoult */
+        likes[4].style.color = "#404040";
+        let i=posts[4].likes
+        /* infatti il numero di like è quello iniziale */
+        document.getElementById("like-counter-5").innerHTML=i
+    }
 })
