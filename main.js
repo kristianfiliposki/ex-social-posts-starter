@@ -5,7 +5,8 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/300?image=171",
         "author": {
-            "name": "Phil Mangione",
+            "name": "Phil",
+            "surname":"Mangione",
             "image": "https://unsplash.it/300/300?image=15"
         },
         "likes": 80,
@@ -16,7 +17,8 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=112",
         "author": {
-            "name": "Sofia Perlari",
+            "name": "Sofia",
+            "surname": "Perlari",
             "image": "https://unsplash.it/300/300?image=10"
         },
         "likes": 120,
@@ -27,7 +29,8 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=234",
         "author": {
-            "name": "Chiara Passaro",
+            "name": "Chiara",
+            "surname": "Passaro",
             "image": "https://unsplash.it/300/300?image=20"
         },
         "likes": 78,
@@ -38,7 +41,8 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=24",
         "author": {
-            "name": "Luca Formicola",
+            "name": "Luca",
+            "surname": "Formicola",
             "image": "https://ca.slack-edge.com/T91QPE3BP-UND27RT6W-858cb3ce8dfd-512"
         },
         "likes": 56,
@@ -49,7 +53,8 @@ const posts = [
         "content": "Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.",
         "media": "https://unsplash.it/600/400?image=534",
         "author": {
-            "name": "Alessandro Sainato",
+            "name": "Alessandro",
+            "surname": "Sainato",
             "image": "https://unsplash.it/300/300?image=29"
         },
         "likes": 95,
@@ -71,7 +76,7 @@ posts.forEach(element =>
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${element.author.image}" alt="Phil Mangione">                    
+                    <img class="profile-pic" src="${element.author.image}" alt="${(element.author.name.substring(0,1))+(element.author.surname.substring(0,1))}">                    
                 </div>
                 <div class="post-meta__data">
                     <div class="post-meta__author">${element.author.name}</div>
@@ -98,7 +103,9 @@ posts.forEach(element =>
         </div>            
     </div>
     `
-);   
+    );   
+
+
 
 
 
